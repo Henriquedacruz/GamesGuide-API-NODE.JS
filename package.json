@@ -1,0 +1,9 @@
+{
+  "name": "GamesGuide",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Henriquedacruz/GamesGuide-API-NODE.JS.git",
+  "author": "Antonio Henrique <88168605+Henriquedacruz@users.noreply.github.com>",
+  "license": "MIT",
+  "type": "module"
+}
