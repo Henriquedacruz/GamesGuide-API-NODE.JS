@@ -1,16 +1,15 @@
-import express from "express";
-import director from "./controllers/directorController.js";
-import { verifyJWT } from './middlewares/jwt.js';
+import express from 'express';
 
 
-const router = express.Router();
+import user from "./controllers/registrationController.js";
+//import { verifyJWT } from './middlewares/jwt.js';
+import login from "./controllers/loginController.js";
 
-// a requisição será encaminhada para o controler correpondente a ela.
-router.use('/', user);
 
-//salvar os dados informados no front
-router.post('/', 
-   
-);
+const route = express.Router();
 
-export default router;
+//redirecioan as requisições para a controller correspondente
+route.use('/registerUser', user);
+route.use('/login', login);
+
+export default route;

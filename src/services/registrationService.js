@@ -19,7 +19,7 @@ async function insertUser(email, password, userName){
 //listar usuarios
 async function findUser(){
   const conn = await database.connect()
-  const sql = 'select * from tbl_usuario'
+  const sql = 'select * from tbl_user'
   const [rows] = await conn.query(sql)//filtra dados desnecessarios 
   conn.end()
   return rows
@@ -27,7 +27,7 @@ async function findUser(){
 //atualizar susuario
 async function updateUser(email, password, userName, idUser){
   const conn = await database.connect()
-  const sql = 'UPDATE tbl_usuario SET email =?, senha =?, nome_usuario =? WHERE id_usuario =?';
+  const sql = 'UPDATE tbl_usuario SET email =?, password =?, nome_usuario =? WHERE id_user =?';
   const dataUser = [email, password, userName, idUser];
   await conn.query(sql, dataUser);
   conn.end()
@@ -36,7 +36,7 @@ async function updateUser(email, password, userName, idUser){
 //deletar usuario
 async function deleteUser(idUser){
     const conn = await database.connect()
-    const sql = 'DELETE FROM tbl_usuario WHERE id_usuario =?';
+    const sql = 'DELETE FROM tbl_usuer WHERE id_user =?';
     const dataUser = [idUser];
     await conn.query(sql, dataUser);
     conn.end()

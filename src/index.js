@@ -9,7 +9,7 @@ api.use(express.json());
 
 api.use('/', routes);  //redireciona a entrada
 
-api.listen('3333', () => {
+api.listen('8080', () => {
   console.log('Server is Running...');
 });
 
