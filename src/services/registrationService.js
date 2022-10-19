@@ -27,7 +27,7 @@ async function findUser(){
 //atualizar susuario
 async function updateUser(email, password, userName, idUser){
   const conn = await database.connect()
-  const sql = 'UPDATE tbl_usuario SET email =?, password =?, nome_usuario =? WHERE id_user =?';
+  const sql = 'UPDATE tbl_usuer SET email =?, password =?, nome_usuario =? WHERE id_user =?';
   const dataUser = [email, password, userName, idUser];
   await conn.query(sql, dataUser);
   conn.end()
