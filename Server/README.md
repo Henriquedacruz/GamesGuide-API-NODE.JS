@@ -1,2 +1,0 @@
-# GamesGuide-API-NODE.JS
- 

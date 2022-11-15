@@ -24,15 +24,15 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
+          <Route element={<ProtectedRouter isAuth={isSigned} />}>
+            <Route path='/Guia' element={<Guia />} />
+          </Route>
           <Route path='/' element={<Main />} />
           <Route path='/Login' element={<Login changeSigned={setIsSigned} isSigned={isSigned} />} />
           <Route path='/Cadastro' element={<Cadastro />} />
-      <Route element={<ProtectedRouter isAuth={isSigned} />}>
-          <Route path='/Guia' element={<Guia />} />
           <Route path='/gender' element={<Gender />} />
           <Route path='/Modal' element={<ModalEdit />} />
           <Route path='*' element={<Erro />} />
-      </Route>
         </Routes>
       </BrowserRouter>
     </div>

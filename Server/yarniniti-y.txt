@@ -1,0 +1,17 @@
+yarn add mysql2
+
+npm install -g nodemon
+
+nodemon src index.js
+
+yarn add express-validator
+
+extenções vscode:
+
+es7
+origamid Next
+vscode-icons
+
+arquivo index.js ponto de entrada da API
+
+
